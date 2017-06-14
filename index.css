@@ -1,0 +1,45 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: LightGray;
+}
+
+li a:hover {
+    background-color: black;
+}
+/*li a:focus{
+  color:red;
+  background-color: black;
+}*/
+img{
+    height: 25px;
+    width: 25px;
+}
+#login{
+    text-align: right;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+
