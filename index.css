@@ -5,8 +5,8 @@ ul {
     overflow: hidden;
     background-color: #333333;
     width: 100%;
-    position: fixed;
-    top: 0;
+    /*position: fixed;
+    top: 0;*/
 }
 
 li {
@@ -24,22 +24,36 @@ li a {
 li a:hover {
     background-color: black;
 }
-/*li a:focus{
-  color:red;
-  background-color: black;
-}*/
 img{
-    height: 25px;
-    width: 25px;
+    height: 100%;
+    width: 20px;
+    border: 0px;
+    display: block;
 }
 #login{
     text-align: right;
 }
-.nav > li > a:hover,
-.nav > li > a:focus {
+
+li  a:hover,
+li  a:focus {
   text-decoration: none;
-  background-color: black;
+  background-color: black !important;
   color: white;
+  font-style: bold;
 }
+.navigation{
+    /*margin-bottom: 50px !important*/
+}
+hr{
+    /*visibility: hidden;*/
+    border-color: black;
+}
+.container-fluid{
+    background-color: #333333;
+}
+a:hover{
+    font-style: bold 
+}
+
 
 
