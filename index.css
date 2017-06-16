@@ -1,4 +1,4 @@
-ul {
+ul.menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -9,10 +9,10 @@ ul {
     top: 0;*/
 }
 
-li {
+li.menu {
     float: left;
 }
-li a {
+li.menu a {
     display: block;
     color: white;
     text-align: center;
@@ -21,7 +21,7 @@ li a {
     color: LightGray;
 }
 
-li a:hover {
+li.menu a:hover {
     background-color: black;
 }
 img{
@@ -34,8 +34,8 @@ img{
     text-align: right;
 }
 
-li  a:hover,
-li  a:focus {
+li.menu  a:hover,
+li.menu  a:focus {
   text-decoration: none;
   background-color: black !important;
   color: white;
@@ -45,7 +45,7 @@ li  a:focus {
     /*margin-bottom: 50px !important*/
 }
 hr{
-    /*visibility: hidden;*/
+    visibility: hidden;
     border-color: black;
 }
 .container-fluid{
@@ -54,6 +54,35 @@ hr{
 a:hover{
     font-style: bold 
 }
-
+#profile{
+    width: 75%; 
+    height: 75%;
+}
+h1{
+    font-weight: bold;
+    font-family: 'Overpass', sans-serif;
+}
+p.info{
+    font-size: 20pt;
+    font-family: 'Raleway', sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+p.pdisp{
+    display: inline;
+    font-size: 20pt;
+    font-family: 'PT Sans', sans-serif;
+}
+p.pdata{
+    font-size: 17pt;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    background-color: rgba(0,0,0,0.2);
+}
+.maindiv{
+    background-color: white;
+}
 
 
