@@ -73,7 +73,13 @@ p.pdisp{
     display: inline;
     font-size: 18pt;
     font-family: 'PT Sans', sans-serif;
+}
+p.pbold{
+    display: inline;
+    font-size: 18pt;
+    font-family: 'PT Sans', sans-serif;
     margin-left: 50px;
+    font-weight: bold;
 }
 p.pdata{
     font-size: 16pt;
@@ -133,6 +139,11 @@ footer p{
     -ms-transform:scale(1.25); /* IE 9 */
     -o-transform:scale(1.25); /* Opera */
     transform:scale(1.25);
+}
+iframe{
+    border: none;
+    width: 100%;
+    height: 100%;
 }
 
 
