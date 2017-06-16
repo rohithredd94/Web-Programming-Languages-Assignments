@@ -63,7 +63,7 @@ h1{
     font-family: 'Overpass', sans-serif;
 }
 p.info{
-    font-size: 20pt;
+    font-size: 18pt;
     font-family: 'Raleway', sans-serif;
 }
 ul{
@@ -71,14 +71,18 @@ ul{
 }
 p.pdisp{
     display: inline;
-    font-size: 20pt;
+    font-size: 18pt;
     font-family: 'PT Sans', sans-serif;
     margin-left: 50px;
 }
 p.pdata{
-    font-size: 17pt;
+    font-size: 16pt;
     font-family: 'Raleway', sans-serif;
     margin-left: 50px;
+}
+p.intro{
+    font-size: 16pt;
+    font-family: 'Raleway', sans-serif;
 }
 body{
     background-color: rgba(0,0,0,0.2);
