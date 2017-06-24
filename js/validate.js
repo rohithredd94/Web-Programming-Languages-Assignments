@@ -1,46 +1,59 @@
 $(document).ready(function() {
 	// your js code goes here...
-	var para = document.createElement("span");
-	para.setAttribute("id", "span1");
-	$(para).insertAfter("#username");
+	var element = document.createElement("span");
+	element.setAttribute("id", "span1");
+	$(element).insertAfter("#username");
 	
-	para = document.createElement("span");
-	para.setAttribute("id", "span2");
-	$(para).insertAfter("#password");
+	element = document.createElement("span");
+	element.setAttribute("id", "span2");
+	$(element).insertAfter("#password");
 
-	para = document.createElement("span");
-	para.setAttribute("id", "span3");
-	$(para).insertAfter("#email");
+	element = document.createElement("span");
+	element.setAttribute("id", "span3");
+	$(element).insertAfter("#email");
 
 	$("#username").focusin(function(){
 		//console.log("Inside");
-		$("#span1").empty();
-		var para = document.getElementById("username").nextSibling;
+		$("#span1").empty().removeClass("ok").removeClass("error");
+		var element = document.getElementById("username").nextSibling;
 		var node = document.createTextNode("infoMessage");
-		para.appendChild(node);
-		$(para).addClass("info");
+		element.appendChild(node);
+		$(element).addClass("info");
 		//$("#span1").html("node");
-		//para.setAttribute("id", "span1");
+		//element.setAttribute("id", "span1");
 		//var child = document.getElementById("username");
-		//console.log(para);
-		//$(para).insertAfter("#username");
+		//console.log(element);
+		//$(element).insertAfter("#username");
 	});
 	$("#username").focusout(function(){
-		$("#span1").empty().removeClass("info");
+		$("#span1").empty().removeClass("info").removeClass("ok").removeClass("error");
 		var username = $("#username");
 		if(username.val().length != 0){
 			console.log("Found Content");
-
+			var pattern = /^[0-9a-zA-Z]+$/;
+			if(username.val().match(pattern)){
+				console.log("valid pattern");
+				var element = document.getElementById("username").nextSibling;
+				var node = document.createTextNode("OK");
+				element.appendChild(node);
+				$(element).addClass("ok");
+			}else{
+				console.log("invalid pattern");
+				var element = document.getElementById("username").nextSibling;
+				var node = document.createTextNode("Error");
+				element.appendChild(node);
+				$(element).addClass("error");
+			}
 		}
 	});
 
 	$("#password").focusin(function(){
 		//console.log("Inside");
 		$("#span2").empty();
-		var para = document.getElementById("password").nextSibling;
+		var element = document.getElementById("password").nextSibling;
 		var node = document.createTextNode("infoMessage");
-		para.appendChild(node);
-		$(para).addClass("info");
+		element.appendChild(node);
+		$(element).addClass("info");
 	});
 	$("#password").focusout(function(){
 		$("#span2").empty().removeClass("info");
@@ -53,10 +66,10 @@ $(document).ready(function() {
 	$("#email").focusin(function(){
 		//console.log("Inside");
 		$("#span3").empty();
-		var para = document.getElementById("email").nextSibling;
+		var element = document.getElementById("email").nextSibling;
 		var node = document.createTextNode("infoMessage");
-		para.appendChild(node);
-		$(para).addClass("info");
+		element.appendChild(node);
+		$(element).addClass("info");
 	});
 	$("#email").focusout(function(){
 		$("#span3").empty().removeClass("info");
