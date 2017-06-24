@@ -49,30 +49,41 @@ $(document).ready(function() {
 
 	$("#password").focusin(function(){
 		//console.log("Inside");
-		$("#span2").empty();
+		$("#span2").empty().removeClass("ok").removeClass("error");
 		var element = document.getElementById("password").nextSibling;
 		var node = document.createTextNode("infoMessage");
 		element.appendChild(node);
 		$(element).addClass("info");
 	});
 	$("#password").focusout(function(){
-		$("#span2").empty().removeClass("info");
+		$("#span2").empty().removeClass("info").removeClass("ok").removeClass("error");
 		var password = $("#password");
 		if(password.val().length != 0){
 			console.log("Found Content");
+			if(password.val().length >= 8){
+				var element = document.getElementById("password").nextSibling;
+				var node = document.createTextNode("OK");
+				element.appendChild(node);
+				$(element).addClass("ok");
+			}else{
+				var element = document.getElementById("password").nextSibling;
+				var node = document.createTextNode("Error");
+				element.appendChild(node);
+				$(element).addClass("error");
+			}
 		}
 	});
 
 	$("#email").focusin(function(){
 		//console.log("Inside");
-		$("#span3").empty();
+		$("#span3").empty().removeClass("ok").removeClass("error");
 		var element = document.getElementById("email").nextSibling;
 		var node = document.createTextNode("infoMessage");
 		element.appendChild(node);
 		$(element).addClass("info");
 	});
 	$("#email").focusout(function(){
-		$("#span3").empty().removeClass("info");
+		$("#span3").empty().removeClass("info").removeClass("ok").removeClass("error");
 		var email = $("#email");
 		if(email.val().length != 0){
 			console.log("Found Content");
