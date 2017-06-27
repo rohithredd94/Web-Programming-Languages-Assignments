@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+README.txt
+Screenshots/
+rxk152130_HW2.zip
