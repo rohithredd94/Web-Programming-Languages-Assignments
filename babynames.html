@@ -1,0 +1,59 @@
+</DOCTYPE html>
+<html>
+<head>
+	<title>Baby Names</title>
+	<script>
+		function getResult(year, gender) {
+			// body...
+			console.log(year,gender);
+			if(window.XMLHttpRequest){
+				xmlhttp = new XMLHttpRequest();
+			}
+			xmlhttp.onreadystatechange=function(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					document.getElementById("output").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET","babynames.php?year="+year+"&gender="+gender,true);
+			xmlhttp.send();
+		}
+	</script>
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+		th,td{
+			border: 2px solid black;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="year">Year</label>
+		<select name="year">
+			<option value=""></option>
+			<option value="2005">2005</option>
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+		</select>
+		<label for="Gender">Gender</label>
+		<select name="gender">
+			<option value=""></option>
+			<option value="m">Male</option>
+			<option value="f">Female</option>
+		</select>
+		<input type="button" name="GET" value="GET" onclick="getResult(year.value,gender.value)">
+	</form>
+	<br>
+	<div id="output"></div>
+</body>
+</html>
