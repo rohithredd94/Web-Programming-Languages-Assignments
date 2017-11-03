@@ -51,6 +51,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+<<<<<<< HEAD
 Screenshots/
 README.txt
 rxk152130-HW1.zip
+=======
+README.txt
+Screenshots/
+rxk152130_HW2.zip
+>>>>>>> main2
